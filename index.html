@@ -1,8 +1,6 @@
-<div id="wrapper" >
-    <img src="./Martie-Sun-Loading-Optimized.gif" alt="loading" id="loading">
+<img src="./Martie-Sun-Loading-Optimized.gif" alt="loading" id="loading">
     <div id="preloader">
     </div> 
-</div>
 <div id="BG"></div>
 <script type="text/javascript">
     var pl = document.getElementById('preloader');
@@ -23,13 +21,23 @@
 </script>
 <body onload=""></body>
 <style>
+    body{
+        margin: 0px;
+    }
 #loading{
-    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    display: block;
     height: auto;
-    position: absolute;
+    width: 30%;
     padding: 50px;
     background-color: #20303f;
-
+    display: block;
+    z-index: 100;
+    visibility: visible;
+    left:30%;
+    right: 30%;
+    top: 10%;
 }
 #BG {
     background-color: #283C4F;
@@ -44,20 +52,4 @@
     visibility: visible;
 }
 
-#wrapper {
-    margin: 0;
-    position: fixed;
-    display: block;
-    height: 30%;
-    width: 30%;
-    left: 30%;
-    right: 30%;
-    top: 10%;
-    bottom: 10%;
-    background-color: #20303f;
-    display: block;
-    z-index: 100;
-    visibility: visible;
-    
-}
 </style>
