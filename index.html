@@ -1,7 +1,9 @@
-<img src="./Martie-Sun-Loading-Optimized.gif" alt="loading" id="loading">
-    <div id="preloader">
-    </div> 
-<div id="BG"></div>
+<div id="wrapper">
+    <img src="./Martie-Sun-Loading-Optimized.gif" alt="loading" id="loading">
+    <div id="preloader"></div> 
+    <div id="BG"></div>
+</div>
+
 <script type="text/javascript">
     var pl = document.getElementById('preloader');
     var wrap = document.getElementById('wrapper');
@@ -10,8 +12,8 @@
     viz = "visible";
 
     function load(){
-        wrap.style.visibility = "hidden";
-        console.log(viz);
+        wrap.style.opacity = "0";
+        console.log(wrap.style.opacity);
     };
 
     function getLocation(){
@@ -21,9 +23,12 @@
 </script>
 <body onload=""></body>
 <style>
-    body{
-        margin: 0px;
-    }
+#wrapper{
+    margin: 0px;
+    transition-property: opacity;
+	transition-duration: 1s;
+	transition-timing-function: linear;
+}
 #loading{
     margin: 0 auto;
     position: fixed;
@@ -51,5 +56,4 @@
     position: fixed;
     visibility: visible;
 }
-
 </style>
