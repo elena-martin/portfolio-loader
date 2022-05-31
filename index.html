@@ -5,13 +5,14 @@
 </div>
 
 <script type="text/javascript">
-    var pl = document.getElementById('preloader');
+    var pl = document.getElementById('loading');
     var wrap = document.getElementById('wrapper');
     var BG = document.getElementById('BG');
 
     viz = "visible";
 
     function load(){
+        pl.style.opacity = "0";
         wrap.style.opacity = "0";
         console.log(wrap.style.opacity);
     };
@@ -21,7 +22,7 @@
     };
 
 </script>
-<body onload="load()"></body>
+<body onload="load();"></body>
 <style>
 #wrapper{
     margin: 0px;
@@ -43,6 +44,11 @@
     left:30%;
     right: 30%;
     top: 10%;
+}
+#preloader {
+    transition-property: opacity;
+	transition-duration: .25s;
+	transition-timing-function: linear;
 }
 #BG {
     background-color: #283C4F;
